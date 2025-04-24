@@ -1,5 +1,7 @@
 ## WCAG 2.2 Success Criterias
 
+A practical checklist aligned with the latest WCAG 2.2 guidelines for developers, testers, and designers. Use this to validate compliance and improve digital inclusion.
+
 | Success Criteria | Description | Applicable | Non-Applicable | Example |
 | :---: | --- | --- | --- | --- |
 | [WCAG 2.4.11 Focus Not Obscured (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html) [AA] | This criterion requires that when a user interface component receives keyboard focus, the component is not entirely hidden by author-created content. | This criterion applies to any user interface component that can receive keyboard focus. | Except for content opened by the component, such as a drop-down menu or a modal dialog. | <li> A navigation menu with sticky headers and footers that do not overlap the focused menu item. </li> <br> <li> A form with input fields and labels that are not covered by a notification banner or a tooltip. </li> <br> <li> A game with icons and buttons that are not hidden by a lightbox or a semi-opaque overlay. </li>
