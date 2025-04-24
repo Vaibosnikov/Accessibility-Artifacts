@@ -1,4 +1,7 @@
 # ARIA - Accessible Rich Internet Application
+
+ARIA provides additional accessibility information to assistive technologies when native HTML lacks necessary semantics. Use ARIA roles, states, and properties responsibly to enhance—never replace—semantic HTML.
+
 ## ARIA Roles
 | ROLES | SUMMARY | REFERENCE |
 | :---: | --- | :---: |
