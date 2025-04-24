@@ -78,7 +78,7 @@ Join the Discussions tab to:
 - Share testing experiences or tool configurations
 - Get help understanding a complex WCAG guideline
 
-> 📬 For professional consultations or speaking opportunities, connect with me on [LinkedIn](www.linkedin.com/in/vaibosnikov)
+> 📬 For professional consultations or speaking opportunities, connect with me on [LinkedIn](https://www.linkedin.com/in/vaibosnikov/)
 
 ---
 
