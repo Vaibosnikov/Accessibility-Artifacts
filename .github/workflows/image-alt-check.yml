@@ -11,9 +11,6 @@ jobs:
   check-for-alt-text:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Detect images without alt text
         uses: actions/github-script@v7
         with:
@@ -32,40 +29,47 @@ jobs:
 
             const user = payload.sender.login;
 
-            // Regex to find images without alt text: ![](url) or ![   ](url)
+            // Regex to match images without alt text: ![](url) or ![   ](url)
             const imgRegex = /!\[\s*\]\((.*?)\)/g;
             const matches = [...content.matchAll(imgRegex)];
 
             if (matches.length > 0) {
-              const comment = `👋 Hey @${user}, it looks like one or more images you added are missing **alt text**.  
-For better accessibility, please provide descriptive text inside the image markdown like so:  
-\`![Brief description](image_url)\`  
+              const comment = `👋 Hey @${user}, it looks like one or more images you added are missing **alt text**.
+
+For better accessibility, please provide descriptive text inside the image markdown like so:
+\`![Brief description](image_url)\`
+
 If the image is purely decorative, you may skip it—but if it's meaningful, alt text helps everyone.`;
 
-              if (context.eventName === "issue_comment") {
+              const repoParams = {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+              };
+
+              if (context.eventName === "issues") {
                 await github.rest.issues.createComment({
-                  ...context.repo,
+                  ...repoParams,
                   issue_number: payload.issue.number,
-                  body: comment
+                  body: comment,
                 });
-              } else if (context.eventName === "issues") {
+              } else if (context.eventName === "issue_comment") {
                 await github.rest.issues.createComment({
-                  ...context.repo,
+                  ...repoParams,
                   issue_number: payload.issue.number,
-                  body: comment
+                  body: comment,
                 });
               } else if (context.eventName === "pull_request") {
                 await github.rest.issues.createComment({
-                  ...context.repo,
+                  ...repoParams,
                   issue_number: payload.pull_request.number,
-                  body: comment
+                  body: comment,
                 });
               } else if (context.eventName === "pull_request_review_comment") {
                 await github.rest.pulls.createReviewCommentReply({
-                  ...context.repo,
+                  ...repoParams,
                   pull_number: payload.pull_request.number,
                   comment_id: payload.comment.id,
-                  body: comment
+                  body: comment,
                 });
               }
             }
