@@ -78,7 +78,11 @@ Join the Discussions tab to:
 - Share testing experiences or tool configurations
 - Get help understanding a complex WCAG guideline
 
+<<<<<<< HEAD
 > 📬 For professional consultations or speaking opportunities, connect with me on [LinkedIn](www.linkedin.com/in/vaibosnikov)
+=======
+> 📬 For professional consultations or speaking opportunities, connect with me on [LinkedIn](https://www.linkedin.com/in/vaibosnikov/)
+>>>>>>> d0bc95f63cc503751e1b12cfa6d2bc80249f735b
 
 ---
 
@@ -90,4 +94,8 @@ Driven by empathy. Inspired by precision.
 
 ---
 
+<<<<<<< HEAD
 > “The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.” – *Tim Berners-Lee*
+=======
+> “The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.” – *Tim Berners-Lee*
+>>>>>>> d0bc95f63cc503751e1b12cfa6d2bc80249f735b
